@@ -18,9 +18,7 @@ public class Program {
         list.add(new Product("Xbox", 1190.99 ));
         list.add(new Product("Keyboard", 90.99 ));
 
-        UpperCaseName upc = new UpperCaseName();
-
-       List<String> names = list.stream().map(upc).toList();
+       List<String> names = list.stream().map(Product::staticUpperCaseName).toList();
        names.forEach(System.out::println);
 
     }
